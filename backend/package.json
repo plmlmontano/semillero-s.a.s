@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Semillero S.A.S",
+  "main": "serve.js",
+  "scripts": {
+    "start": "node -r esm serve.js",
+    "dev": "nodemon  --experimental-modules serve.js --exec  babel-node"
+  },
+  "repository": "",
+  "author": "Lina Maria Montaño Ramirez - @calypsobronte",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "connect-multiparty": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.2",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.0"
+  }
+}

@@ -1,0 +1,1107 @@
+{
+	"info": {
+		"_postman_id": "6dd57cb9-cc0c-46a0-aed1-95811a7435e6",
+		"name": "academia-geek",
+		"description": "Lista de API Rest utilizada en el transcurso del Bootcamp Backend por Academia Geek",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Semillero S.A.S",
+			"item": [
+				{
+					"name": "local",
+					"item": [
+						{
+							"name": "marca",
+							"item": [
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"descripcion\": \"Mazda\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/marca",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"marca"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "list all marca",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/marca",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"marca"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"description": "Consultas de Marca de vehiculos"
+						},
+						{
+							"name": "linea",
+							"item": [
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id_marca\": 2,\r\n    \"descripcion\": \"Terreno\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/linea",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"linea"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "list all linea",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/linea",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"linea"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"description": "Consultas de las lineas de los vehiculos"
+						},
+						{
+							"name": "vehiculos",
+							"item": [
+								{
+									"name": "list all vehiculo",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/vehiculo",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"vehiculo"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete by number placa",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/vehiculo/HRM874",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"vehiculo",
+												"HRM874"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "list by number placa",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/vehiculo/KVR103",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"vehiculo",
+												"KVR103"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"nro_placa\": \"KVR103\",\r\n    \"id_linea\": 8,\r\n    \"color\": \"Blue\",\r\n    \"modelo\": \"2022\",\r\n    \"fecha_vencimiento_seguro\": \"2022-08-09\",\r\n    \"fecha_vencimiento_tecnomecanica\": \"2023-10-04\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/vehiculo",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"vehiculo"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"modelo\": \"2009\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/api/vehiculo/HRM874",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"vehiculo",
+												"HRM874"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Lista de todos los vehiculos",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/vehiculo/all",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"vehiculo",
+												"all"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "consultas",
+							"item": [
+								{
+									"name": "Conteo de todos los registros de los vehiculos",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/consultas/count",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"consultas",
+												"count"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Rango de fechas",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/consultas/range-date",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"consultas",
+												"range-date"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Estado del vehiculo",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/consultas/state",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"consultas",
+												"state"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Estado vehiculos con la linea activa",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/consultas/state-linea-true",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"consultas",
+												"state-linea-true"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Estado vehiculos con la linea desactivado",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/consultas/state-linea-false",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"consultas",
+												"state-linea-false"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Conteo de todas la lineas activas",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/consultas/count-linea-true",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"consultas",
+												"count-linea-true"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Conteo de todas la lineas desactivadas",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/consultas/count-linea-false",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"consultas",
+												"count-linea-false"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Maximo y minimo de los modelos de los vehiculos registrados",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/consultas/max-min",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"consultas",
+												"max-min"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Rango de modelo v1",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/consultas/range-model-v1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"consultas",
+												"range-model-v1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Rango de modelos v2",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/consultas/range-model-v2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"consultas",
+												"range-model-v2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Suma de los modelos",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/consultas/sum",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"consultas",
+												"sum"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Promedio de los modelos",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/api/consultas/avg",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"api",
+												"consultas",
+												"avg"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"description": "Encontras todas las consultas propuestas en el documento de requisitos\nhttps://docs.google.com/document/d/1o6GBIRZPNU-CZYMuantazmjiGd5VnKmq_EeEMPUhHS4/edit?usp=sharing"
+						},
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
+					"description": "En esta carpeta encontraras todos los endopoint de forma local con puerto 5000 de Marca, Lineas y Vehiculos con sus respectivas consultas."
+				},
+				{
+					"name": "server",
+					"item": [
+						{
+							"name": "marca",
+							"item": [
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"descripcion\": \"Mazda\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/marca",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"marca"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "list all marca",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/marca",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"marca"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"description": "Consultas de marcas de los vehiculos\n"
+						},
+						{
+							"name": "linea",
+							"item": [
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id_marca\": 2,\r\n    \"descripcion\": \"Terreno\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/linea",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"linea"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "list all linea",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/linea",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"linea"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "vehiculos",
+							"item": [
+								{
+									"name": "list all vehiculo con marca y linea",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/vehiculo",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"vehiculo"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Lista de todos los vehiculos",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/vehiculo/all",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"vehiculo",
+												"all"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete by number placa",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/vehiculo/HRM874",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"vehiculo",
+												"HRM874"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"nro_placa\": \"HRM874\",\r\n    \"id_linea\": 2,\r\n    \"color\": \"Rojo\",\r\n    \"modelo\": \"2001\",\r\n    \"fecha_vencimiento_seguro\": \"2022-10-09\",\r\n    \"fecha_vencimiento_tecnomecanica\": \"2022-05-15\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/vehiculo",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"vehiculo"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"modelo\": \"2009\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/vehiculo/LMM992",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"vehiculo",
+												"LMM992"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "list by number placa",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/vehiculo/KVR103",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"vehiculo",
+												"KVR103"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "consultas",
+							"item": [
+								{
+									"name": "Conteo de todos los registros de los vehiculos",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/consultas/count",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"consultas",
+												"count"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Rango de fechas",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/consultas/range-date",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"consultas",
+												"range-date"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Estado del vehiculo",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/consultas/state",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"consultas",
+												"state"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Estado vehiculos con la linea activa",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/consultas/state-linea-true",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"consultas",
+												"state-linea-true"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Estado vehiculos con la linea desactivado",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/consultas/state-linea-false",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"consultas",
+												"state-linea-false"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Conteo de todas la lineas activas",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/consultas/count-linea-true",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"consultas",
+												"count-linea-true"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Conteo de todas la lineas desactivadas",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/consultas/count-linea-false",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"consultas",
+												"count-linea-false"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Maximo y minimo de los modelos de los vehiculos registrados",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/consultas/max-min",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"consultas",
+												"max-min"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Rango de modelo v1",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/consultas/range-model-v1",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"consultas",
+												"range-model-v1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Rango de modelos v2",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/consultas/range-model-v2",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"consultas",
+												"range-model-v2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Suma de los modelos",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/consultas/sum",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"consultas",
+												"sum"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Promedio de los modelos",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://api-semillero.herokuapp.com/api/consultas/avg",
+											"protocol": "https",
+											"host": [
+												"api-semillero",
+												"herokuapp",
+												"com"
+											],
+											"path": [
+												"api",
+												"consultas",
+												"avg"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api-semillero.herokuapp.com/api/index",
+									"protocol": "https",
+									"host": [
+										"api-semillero",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"index"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "En esta carpeta encontraras todas las consultas subidas al servidor en este caso utilizamos Heroku para poder exponer nuestra API Rest para que sea consumida por cualquier tipo de cliente."
+				}
+			],
+			"description": "La empresa **Semillero S.A.S** quiere implementar una base de datos que le permita tener un control más preciso de los vehículos que tienen en la compañía, se desea guardar las diferentes marcas de vehículos que tiene la compañía, de estas marcas se quiere almacenar la descripción y si la marca está activa en la compañía. También cada marca puede tener 1 o muchas líneas de vehículos, de cada línea se quiere almacenar la descripción de la línea y si está activa. Por último, se quiere almacenar cada uno de los vehículos, para eso se quiere guardar el número de placa, el modelo, fecha de vencimiento seguro y fecha de vencimiento de la tecnomecánica, cada vehículo puede estar asociado a una línea, y una línea puede tener muchos vehículos. **Todos los datos son importantes para la compañía así que todos deben ser guardados.**"
+		}
+	]
+}
