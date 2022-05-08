@@ -58,6 +58,24 @@ INSERT INTO vehiculos VALUES
 SELECT * FROM vehiculos;
 
 
+-- usuarios
+CREATE TABLE usuarios (
+  id INT PRIMARY KEY auto_increment NOT NULL,
+  full_name VARCHAR(45) DEFAULT NULL,
+  email VARCHAR(45) DEFAULT NULL,
+  mobile VARCHAR(45) DEFAULT NULL,
+  placa VARCHAR(45) DEFAULT NULL,
+  date_create TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- fecha de creacion del registro
+  date_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP -- fecha de actualizacion del registro
+);
+
+DESCRIBE usuarios;
+
+INSERT INTO usuarios (full_name, email, mobile, placa, date_create, date_update)
+VALUES('Lina Montano', 'lm@h.c', '234445', 'OIU-678', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+SELECT * FROM usuarios;
+
+
 -- Ingreso de data
 INSERT INTO marca  (descripcion, estado, date_create, date_update) VALUES
 ('Renault', 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
