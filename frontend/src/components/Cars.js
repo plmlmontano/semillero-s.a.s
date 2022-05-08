@@ -67,10 +67,10 @@ const Cars = () => {
             <p>Selecciona el vehículo de tu interés y conócelo por completo</p>
             <ImageList cols={4} >
                 {cars.map((car) => (
-                    <ImageListItem key={car.img}>
+                    <ImageListItem key={car.imagenUrl}>
                         <img
-                            src={`${car.img || 'https://www.chevrolet.com/content/dam/chevrolet/na/us/english/test-and-target/segment-car.png?imwidth=960'}?w=248&fit=crop&auto=format`}
-                            srcSet={`${car.img || 'https://www.chevrolet.com/content/dam/chevrolet/na/us/english/test-and-target/segment-car.png?imwidth=960'}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                            src={`${car.imagenUrl || 'https://www.chevrolet.com/content/dam/chevrolet/na/us/english/test-and-target/segment-car.png?imwidth=960'}?w=248&fit=crop&auto=format`}
+                            srcSet={`${car.imagenUrl || 'https://www.chevrolet.com/content/dam/chevrolet/na/us/english/test-and-target/segment-car.png?imwidth=960'}?w=248&fit=crop&auto=format&dpr=2 2x`}
                             alt={car.nro_placa}
                             loading="lazy"
                         />

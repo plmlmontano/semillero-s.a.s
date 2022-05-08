@@ -49,13 +49,13 @@ export default function ButtonAppBar() {
                 </Typography>
 
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                  <Link to="/chat" style={{ textDecoration: "none", color: '#eee' }}>
-                    chat
+                  <Link to="/join-chat" style={{ textDecoration: "none", color: '#eee' }}>
+                    Chat
                   </Link>
                 </Typography>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                   <Link to="/cotizacion" style={{ textDecoration: "none", color: '#eee' }}>
-                    vehiculos
+                    Nuestros vehiculos
                   </Link>
                 </Typography>
                 <Button
@@ -91,8 +91,8 @@ export default function ButtonAppBar() {
                   </Link>
                 </Typography>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                  <Link to="/chat" style={{ textDecoration: "none", color: '#eee' }}>
-                    chat
+                  <Link to="/join-chat" style={{ textDecoration: "none", color: '#eee' }}>
+                    Chat
                   </Link>
                 </Typography>
 

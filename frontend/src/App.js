@@ -2,6 +2,7 @@ import CarForm from "./components/CarForm";
 import CarsList from "./components/CarList";
 import Cars from "./components/Cars";
 import Chat from "./components/Chat";
+import Join from "./components/Join";
 import MarcasList from "./components/MarcasList";
 import LineaList from "./components/LineaList";
 import Menu from "./components/Navbar";
@@ -20,6 +21,7 @@ function App() {
         <Container>
           <Routes>
             <Route index path="/" element={<Index />} />
+            <Route path="/join-chat" exact element={<Join />} />
             <Route path="/chat" element={<Chat />} />
             <Route path="/cotizacion" element={<Cars />} />
             <Route path="/vehiculos" element={<ProtectedRoute><CarsList /></ProtectedRoute>} />
