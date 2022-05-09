@@ -9,6 +9,8 @@ export const dateFormat = (data) => {
         fecha_vencimiento_tecnomecanica: item.fecha_vencimiento_tecnomecanica.toISOString().slice(0, 10),
         estado: item.estado,
         date_create: item.date_create,
-        date_update: item.date_update}
+        date_update: item.date_update,
+        imagen_url: item.imagen_url,
+    }
     })
 }

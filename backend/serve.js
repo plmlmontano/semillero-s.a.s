@@ -4,6 +4,7 @@ import morgan from "morgan";
 import cors from "cors";
 import socket from "socket.io";
 import http from "http";
+import bodyParser from "body-parser";
 
 import indexRoutes from "./routes/index.routes";
 import vehiculoRoutes from "./routes/vehiculo.routes";
@@ -23,6 +24,11 @@ const io = socket(server, { cors: { origin: '*' } })
 // settings
 app.set("port", process.env.PORT);
 
+// parse body params and attache them to req.body
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+
+
 // connection control
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -37,6 +43,8 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+
 
 //use of route
 app.use("/api/index", indexRoutes); //Initial

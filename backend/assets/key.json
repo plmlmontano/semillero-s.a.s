@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "sanguine-medley-348013",
+    "private_key_id": "2976dfbe6917bf4b493bb1e2260b146f4695849c",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDOdj2HRUakzj2g\nZQ3jkdG5Rs8KFx24MDybhLbk71Cip057JJpScgWPBARXNj12J3UJT1MnSwxm4s0w\nwK2SO9XSbWrpfRhq5hygqJc/HLmK54krBvuDYp2CtvHGjckS18yhmUzy6i7ZlI2h\no81PTvw3Or8iCeiqtW/d/5wDpRNOFv2a2zyMt8u9VCdRvaAThCn+vmtHVuvbEu8j\nYoYKNeTRDDiRxh3DLS5GPEpYs2RFKT9+PYJ/hAQqJFYfNP+hz3tNNavJLF9J/rx0\nzgZTMfVd5EUosHl8vKrcpCdW7O7k8hRWZfPfg48PbVBcG1SkCc7yttfhV2SSdZTI\n2GAotg5BAgMBAAECggEAKVCS9m8/+DnHLkIamefzsmI/ixLeIR4R+sL/gGd9WNcn\nBtBny0jC4QAaSENz4CF8M506lBnaBPqsue1Mrn8nxiCcLNYaHUYoA2RJQ9lhLbEw\nizot+Xgx8dbfIe78hjdF3S6ard97+ZFXGDn5mz3AjeLFHbAi7Yo6NQ/x7e7KIq1u\nEswyd4tHf+1T7j0b23faz9qPTdgE2oDpDo8s7uhNvu/0DIs8gqyQaVwSH50HYhZB\nhWRJOPNPmILuhaV3JsYdb10WNw7PXswIxlZrv53keVHuxmPy1G3VOzO7G2WVcAd6\nAhtgshBYKEqP2G3LePJqzoPWTa6wTdvZsUVlQ7gcuQKBgQDp/CdU9hmo1SESRnxJ\nMq3q+20gDoUoFNVchX9rV+tWfE020pAm6iDAj2dQa2t3p7/Wh2/B6jbUvH+FMaIh\nSqTXrn1IkFHCuOQLvEJR3zPyjOUSYdIcHz1qL37YRAp9nLJSlG7mvWn7FGWF9PIS\n3IWYdWBQlt8f1ug8hUn7btE2/QKBgQDh4yfKvgZJVrAw6vK/moU2KolX8PzkI4N0\nWdqkcLy3yaFYi1luhO8MeZPMTd1kUkPtxKFe1w4kr5BHsEAspE5O/WTHv8w++WnL\nlVs+bqGSCwNktCJrD6gJj1Q/1esuXTmx702oRcXK0giKHN+lxI0v8RxNgByo3Ine\ngM84TidRlQKBgHq6Zsr6lrTmrYUPcYtXSL/zBucElrVSUCNKZm4gXHEtm7aAtVmj\n/m/iB/e3kFPfqhDVUzosJnxpLp3nTboWk+YJQO95u1jeb8b0BPk6kN3NJy4AHxvf\nCvCSXv8CmVoPgb0s3AqtGVS3+xRLSVm5T12LW2yJ5himOYPdCdQW6SflAoGAOBMY\n1LaZfuk7MdmRS0lDmm+yypbzYHsEbgTERyAJaSJvoDhvigUMBq/DpesKc5YMcODo\nIlAGncrLaVByjeJ34hn7Q670OAnYXoaEMRprl4KOZBhnluY7E6x2AKbNDCRuZyJ9\nx7ESacf8ALUsO81wMx+KpB6SfsTIoOifCF42WoUCgYAOJlfTmPlngUtshIxrIJfG\nQVzUxQ6ik27qddeNnwwDZwdLGkVKsTapvZvSAEnCTrO4XH6JrZ381r3+o6mYtXfI\nCSS6vUf7d9qXOfp9RLwvccrgrM7rkEcXPfL/+0Ylg3q9C1irlBoBGZxFXeNTL70R\nIp/h4o7AwcaiVPIgNiVj3A==\n-----END PRIVATE KEY-----\n",
+    "client_email": "academia@sanguine-medley-348013.iam.gserviceaccount.com",
+    "client_id": "102988577385920902757",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/academia%40sanguine-medley-348013.iam.gserviceaccount.com"
+  }
+  
