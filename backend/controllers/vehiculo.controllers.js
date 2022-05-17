@@ -4,7 +4,7 @@ import {dateFormat} from "../helpers/date"
 export const getAll = async (req, res) => {
     try {
         const connection = await connect();
-        const [results] = await connection.query(`SELECT a.nro_placa, c.descripcion marca, b.descripcion linea, a.color, a.modelo, DATE_FORMAT(a.fecha_vencimiento_seguro, '%d/%m/%Y') 'Fecha de vencimiento seguro', DATE_FORMAT(a.fecha_vencimiento_tecnomecanica, '%d/%m/%Y') 'Fecha de vencimiento tecnomecanica', a.estado 
+        const [results] = await connection.query(`SELECT a.nro_placa, c.descripcion marca, b.descripcion linea, a.color, a.modelo, DATE_FORMAT(a.fecha_vencimiento_seguro, '%d/%m/%Y') 'Fecha de vencimiento seguro', DATE_FORMAT(a.fecha_vencimiento_tecnomecanica, '%d/%m/%Y') 'Fecha de vencimiento tecnomecanica', a.estado, a.imagen_url 
         FROM vehiculos a
         LEFT JOIN linea b ON a.id_linea = b.id
         LEFT JOIN marca c ON b.id_marca = c.id;`);

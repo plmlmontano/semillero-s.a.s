@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Card, CardContent, Typography, ImageListItem, ImageList, ImageListItemBar, IconButton } from "@mui/material";
+import { ImageListItem, ImageList, ImageListItemBar, IconButton } from "@mui/material";
 import InfoIcon from '@mui/icons-material/Info';
 import { local, server } from "../helpers/api"
 import axios from "axios"
@@ -11,7 +11,7 @@ const Cars = () => {
     const navigate = useNavigate();
 
     const loadCars = async () => {
-        await axios.get(`${server}api/vehiculo`).then((response) => {
+        await axios.get(`${local}api/vehiculo`).then((response) => {
             setCars(response.data);
         });
     };
@@ -64,13 +64,14 @@ const Cars = () => {
     return (
         <>
             <h1>NUESTROS VEHÍCULOS</h1>
-            <p>Selecciona el vehículo de tu interés y conócelo por completo</p>
+            <p>Selecciona el vehículo de tu interés y cotizalo.</p>
+            {/*<!--conócelo por completo-->*/}
             <ImageList cols={4} >
                 {cars.map((car) => (
-                    <ImageListItem key={car.imagenUrl}>
+                    <ImageListItem key={car.imagen_url}>
                         <img
-                            src={`${car.imagenUrl || 'https://www.chevrolet.com/content/dam/chevrolet/na/us/english/test-and-target/segment-car.png?imwidth=960'}?w=248&fit=crop&auto=format`}
-                            srcSet={`${car.imagenUrl || 'https://www.chevrolet.com/content/dam/chevrolet/na/us/english/test-and-target/segment-car.png?imwidth=960'}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                            src={`${car.imagen_url || 'https://www.chevrolet.com/content/dam/chevrolet/na/us/english/test-and-target/segment-car.png?imwidth=960'}?w=248&fit=crop&auto=format`}
+                            srcSet={`${car.imagen_url || 'https://www.chevrolet.com/content/dam/chevrolet/na/us/english/test-and-target/segment-car.png?imwidth=960'}?w=248&fit=crop&auto=format&dpr=2 2x`}
                             alt={car.nro_placa}
                             loading="lazy"
                         />

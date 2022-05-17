@@ -49,20 +49,31 @@ module.exports = {
             method: 'PUT',
             path: '/api/vehiculo/{nro_placa}',
             handler: async (request, h) => {
-                const nro_placa = request.params.placa;
+                const {nro_placa} = request.params;
                 const data = request.payload
-                const urlImage = await handleFileUpload(data.imagen_url, nro_placa)
-                const cliente = await pool.connect()
+                console.log(data);
+                const urlImage = ""
+                if (data.urlImage) {
+                    urlImage = await handleFileUpload(data.imagen_url, nro_placa)
+                }
+                else{
+                    return urlImage
+                }
                 let save = {
                     ...data,
-                    imagen_url: urlImage
+                    imagen_url: urlImage 
                 }
+                const cliente = await pool.connect()
+                console.log(save);
                 try {
-                    const query = await cliente.query('UPDATE vehiculos SET (modelo, color, fecha_vencimiento_seguro, fecha_vencimiento_tecnomecanica, id_linea, imagen_url) VALUES ($1, $2, $3, $4, $5, $6)', [
+                   /*  const query = await cliente.query('UPDATE vehiculos SET (modelo, color, fecha_vencimiento_seguro, fecha_vencimiento_tecnomecanica, id_linea, imagen_url) VALUES ($1, $2, $3, $4, $5, $6)', [
                         data.modelo, data.color, data.fecha_vencimiento_seguro, data.fecha_vencimiento_tecnomecanica, data.id_linea, urlImage
-                    ]);
-                    
-                    const [results] = await connection.query("UPDATE vehiculos SET ? WHERE nro_placa = ?;", [save, placa]);
+                    ]); */
+                    const query = await cliente.query("UPDATE vehiculos SET ? WHERE nro_placa = ?;", [save, nro_placa]);
+                    console.log(query);
+
+                    const [results] = await connection.query("UPDATE vehiculos SET ? WHERE nro_placa = ?;", [save, nro_placa]);
+                    console.log(results);
                     if ([results] && query.rowCount > 0) {
                         return h.response("¡Datos actualizados con éxito!").code(200);
                     } else {

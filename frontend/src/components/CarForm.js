@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { local, server } from "../helpers/api"
+import { local, server, localHapi } from "../helpers/api"
 import axios from "axios";
 import Swal from "sweetalert2"
 import {
@@ -23,7 +23,8 @@ const CarForm = () => {
     color: "",
     modelo: "",
     fecha_vencimiento_seguro: "",
-    fecha_vencimiento_tecnomecanica: ""
+    fecha_vencimiento_tecnomecanica: "",
+    imagen_url: ""
   });
   const [loading, setLoading] = useState(false);
   const [editing, setEditing] = useState(false);
@@ -44,7 +45,7 @@ const CarForm = () => {
     const res = await fetch(`${server}api/vehiculo/${nro_placa}`);
     const data = await res.json();
     console.log(data);
-    setCar({ nro_placa: data.nro_placa, id_linea: data.id_linea, color: data.color, modelo: data.modelo, fecha_vencimiento_seguro: data.fecha_vencimiento_seguro, fecha_vencimiento_tecnomecanica: data.fecha_vencimiento_tecnomecanica });
+    setCar({ nro_placa: data.nro_placa, id_linea: data.id_linea, color: data.color, modelo: data.modelo, fecha_vencimiento_seguro: data.fecha_vencimiento_seguro, fecha_vencimiento_tecnomecanica: data.fecha_vencimiento_tecnomecanica, imagen_url: data.imagen_url });
     setEditing(true);
   };
 
@@ -53,7 +54,7 @@ const CarForm = () => {
     setLoading(true);
     try {
       if (editing) {
-        await axios.put(`${server}api/vehiculo/${params.nro_placa}`, car, { headers: { "Content-Type": "application/json" } }).then((response) => {
+        await axios.put(`${localHapi}api/vehiculo/${params.nro_placa}`, car, { headers: { "Content-Type": "application/json" } }).then((response) => {
           console.log(response);
           Swal.fire({
             icon: 'success',
@@ -63,7 +64,7 @@ const CarForm = () => {
         })
         });
       } else {
-        await axios.post(`${server}api/vehiculo`, car, { headers: { "Content-Type": "application/json" } }).then((response) => {
+        await axios.post(`${localHapi}api/vehiculo`, car, { headers: { "Content-Type": "application/json" } }).then((response) => {
           console.log(response);
           Swal.fire({
             icon: 'success',
